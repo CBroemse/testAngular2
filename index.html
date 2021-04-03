@@ -7,6 +7,28 @@
  // build the top left text ADDING lines to selected
  // output of hemi4  and myText5
  //   function buildTXT1
+var thu2 = "B Byzyzyz,B B60z60z,B Bzz==0=,B B,D N,F N";   // §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ filled CELLS
+var thu2Ar = ["B Byz","B B60","B B","B B","D N","F N"];
+var liStr = "00000, 0xy0z=3x0y0z=6, x0y0z=6, 0x0yz=2, 01111, xyz=11";  //  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  'quirky'
+var liM2 = ["00000","0xy0z=3x0y0z=6","x0y0z=6","0x0yz=2","01111","xyz=11"]
+
+
+
+var strRZ = "BTC, A1.23 val, BHD, B0.23 val, BTC, C2.34 val , ZEC, D0.3 val, BHD, valE0.5";
+var dataWORKZ = "BBDDDF, FHHHJJ, LLLNNN, PPRRRT, TVVVXX, ZZZ00";
+var thuZ = ["BBDDDF","FHHHJJ","LLLNNN","PPRRRT","TVVVXX","ZZZ\\\\\\"];
+var thuNumZ = "40.1496259351621,47.93926247288503,50.81967213114754,62.0253164556962";  // ##########################################################################     daObJ0
+var thu2Z = "B Byzyzyz,B B60z60z,B Bzz==0=,B B,D N,F N";
+var thu2ZAr = ["B Byz","B B60","B B","B B","D N","F N"];
+
+var strRK = "BTC, A1.23 val, BHD, B0.23 val, BTC, C2.34 val , ZEC, D0.3 val, BHD, valE0.5";
+var dataWORKK = "BBDDDF, FHHHJJ, LLLNNN, PPRRRT, TVVVXX, ZZZ00";
+var thuK = ["BBDDDF","FHHHJJ","LLLNNN","PPRRRT","TVVVXX","ZZZ\\\\\\"];
+var thuKNumK = "40.1496259351621,47.93926247288503,50.81967213114754,62.0253164556962"; // #########################################################  daObJ0
+var thuK2K = "B Byzyzyz,B B60z60z,B Bzz==0=,B B,D N,F N";
+var thuK2KAr = ["B Byz","B B60","B B","B B","D N","F N"];
+
+
    </script>
     <meta http-equiv="refresh" content="300" charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -245,29 +267,22 @@ function myFunction() {
   document.getElementById("demo").innerHTML = x;
 }
 
-var strR = "BTC, A1.23 val, BHD, B0.23 val, BTC, C2.34 val , ZEC, D0.3 val, BHD, valE0.5";
-var dataWORK = "BBDDDF, FHHHJJ, LLLNNN, PPRRRT, TVVVXX, ZZZ00";
-var thu = ["BBDDDF","FHHHJJ","LLLNNN","PPRRRT","TVVVXX","ZZZ\\\\\\"];
-var thuNum = "40.1496259351621,47.93926247288503,50.81967213114754,62.0253164556962";  // ##########################################################################     daObJ0
-var thu2 = "B Byzyzyz,B B60z60z,B Bzz==0=,B B,D N,F N";
-var thu2Ar = ["B Byz","B B60","B B","B B","D N","F N"];
-
 function geT(){
     var workThu = Number(find((tgAr[0]), tgAr));
-    document.getElementById("hemi").innerHTML = "  positions: "+ workThu + "    length:" + thu.length;
+    document.getElementById("hemi").innerHTML = "  positions: "+ workThu + "    length:" + thuZ.length;
     };
 
 function myRegg() {
   var writeRg = document.getElementById("myText2").value;
   var aRg = new RegExp ("("+writeRg+")", "g");
   var patt1 = /(BTC|green)/g;
-  var prepZoe = JSON.stringify(thu2Ar);
-  var result = thu2.match(aRg);
-  var geTs = (find(writeRg, thu2Ar));
+  var prepZoe = JSON.stringify(thu2ZAr);
+  var result = thu2Z.match(aRg);
+  var geTs = (find(writeRg, thu2ZAr));
                      		 
 
-  document.getElementById("hemi").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"EXPLAIN  length:" + thu.length + "         of \'thu2\': ["+ thu2+"]</p>";
-   document.getElementById("zoe").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"  length:" + thu.length + "         of \'thu2\': ["+ thu2+"]</p>";
+  document.getElementById("hemi").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"EXPLAIN  length:" + thuZ.length + "         of \'thu2Z\': ["+ thu2Z+"]</p>";
+   document.getElementById("zoe").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"  length:" + thuZ.length + "         of \'thu2Z\': ["+ thu2Z+"]</p>";
 
   };
 
@@ -285,21 +300,15 @@ function myFunction() {   //                  ----------------------------------
   document.getElementById("demo").innerHTML = x;
 }
 
-var strR = "BTC, A1.23 val, BHD, B0.23 val, BTC, C2.34 val , ZEC, D0.3 val, BHD, valE0.5";
-var dataWORK = "BBDDDF, FHHHJJ, LLLNNN, PPRRRT, TVVVXX, ZZZ00";
-var thu = ["BBDDDF","FHHHJJ","LLLNNN","PPRRRT","TVVVXX","ZZZ\\\\\\"];
-var thuNum = "40.1496259351621,47.93926247288503,50.81967213114754,62.0253164556962"; // #########################################################  daObJ0
-var thu2 = "B Byzyzyz,B B60z60z,B Bzz==0=,B B,D N,F N";
-var thu2Ar = ["B Byz","B B60","B B","B B","D N","F N"];
 
 function myRegRule() {
   var writeRg = document.getElementById("myText2").value;
   var aRg = new RegExp ("("+writeRg+")", "g");
   var patt1 = /(BTC|green)/g;
   var prepZoe = JSON.stringify(zoe);
-  var result = thu2.match(aRg);
-  var geTs = (find(writeRg, thu2Ar));
-  //var backAr = paragraph.thu2Ar;
+  var result = thuK2K.match(aRg);
+  var geTs = (find(writeRg, thuK2KAr));
+  //var backAr = paragraph.thuK2KAr;
     document.getElementById("hemi2").innerHTML = (""+geTs +"     " +geTs.length);
   };
 
@@ -317,10 +326,6 @@ function myFunction6() {                       //                               
   var x = document.getElementById("myText4").value;
   document.getElementById("hemi3").innerHTML = x;
 }
-var thu2 = "B Byzyzyz,B B60z60z,B Bzz==0=,B B,D N,F N";   // §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ filled CELLS
-var thu2Ar = ["B Byz","B B60","B B","B B","D N","F N"];
-var liStr = "00000, 0xy0z=3x0y0z=6, x0y0z=6, 0x0yz=2, 01111, xyz=11";  //  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  'quirky'
-var liM2 = ["00000","0xy0z=3x0y0z=6","x0y0z=6","0x0yz=2","01111","xyz=11"]
 
 function teRex() {
   var writeRg = document.getElementById("myText4").value;
@@ -356,7 +361,7 @@ function teRex() {
 <a href="pfeil" style="border-radius: 12px; padding: 2px 5px;" target="iframe_a">link Angular</a>
  <div class="storyTeller">
 
- <iframe src="https://angular-cloakswordwand.stackblitz.io" name="iframe_a" style="border:none;background:#d1d00f6;frameBorder:0;" width="100%" height="300px"></iframe>
+ <iframe src="https://angular-cloakswordwand.stackblitz.io" name="iframe_a" style="border:none;background:#d1d00f6;frameBorder:0;" width="100%" height="500px"></iframe>
 <br><br>
  </div>
 
