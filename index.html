@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>file-system</title>
+ <script src='https://cdn.plot.ly/plotly-latest.min.js'></script>
+   <script>
+ // build the top left text ADDING lines to selected
+ // output of hemi4  and myText5
+ //   function buildTXT1
+   </script>
+    <meta http-equiv="refresh" content="300" charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  font-family: Arial, Helvetica, sans-serif;
+   font-color: green;	
+}
+
+/* Style the header */
+.header {
+  background-color: black;
+  padding: 10px;
+  text-align: left;
+  font-size: 35px;
+  frameBorder: 0px;
+}
+
+/* Create three unequal columns that floats next to each other */
+.column {
+  float: left;
+  padding: 1px;
+ }
+
+/* Left and right column */
+.column.side {
+  }
+
+/* Middle column */
+.column.middle {
+  width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  .column.side, .column.middle {
+    width: 100%;
+  }
+}
+
+a:link, a:visited {
+  background-color: #008CBA;
+  color: black;
+  border: 2px solid white;
+  padding: 2px 5px;
+  text-decoration: none;
+  display: inline-block;
+  width:5%;
+  font-size: 16px;
+  text-align:left;
+}
+
+a:hover, a:active {
+  background-color: #e7e7e7;
+  color: darkgreen;
+  font-size: 16px;
+}
+.img2 {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+/* The expanding image container */
+.container {
+  position: relative;
+  display: none;
+	  
+}
+/* Closable button inside the expanded image */
+.closebtn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+	.buttonM {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.button2 {background-color: #008CBA;border-radius: 12px;} /* Blue */
+.button3 {background-color: #f44336;} /* Red */ 
+.button4 {background-color: #e7e7e7; color: black;} /* Gray */ 
+.button5 {background-color: #555555;} /* Black */
+
+       .storyTeller {
+  background-color: #1e1c1ecc;
+  color: lime;
+  border: 0px solid white;
+  padding: 2px 5px;
+  text-decoration: none;
+  display: inline-block;
+  width:100%;
+  font-size: 12px;
+  text-align:left;
+}
+
+</style>
+</head>
+<script>
+function myFunction(imgs) {
+  var expandImg = document.getElementById("expandedImg");
+  var imgText = document.getElementById("imgtext");
+  expandImg.src = imgs.src;
+  imgText.innerHTML = imgs.alt;
+  expandImg.parentElement.style.display = "block";
+}
+function RunExe2(){
+    var shell2 = new ActiveXObject("WScript.Shell");
+    var path2 = '"http://127.0.0.1:8023"';
+    shell2.run(path2,1,false);
+}
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+}
+
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+</script>
+<script>
+                       /*  --------------------------------------##################################################### pack a bag for zoe */
+
+function find(needle, haystack) {
+    var results = [];
+    var idx = haystack.indexOf(needle);
+    while (idx != -1) {
+        results.push(idx);
+        idx = haystack.indexOf(needle, idx + 1);
+    }
+    return results;
+};
+
+
+function pacK(a){
+  var beo=[];
+  var teo = beo.push(a);
+  return (document.getElementById("zoe").innerHTML = teo); 
+}
+
+function sliCE(func, foxe){           /* --------------------------   drop foxe of func */
+		const xe = find(foxe, func);	
+			if (xe == 0){
+                        return func.slice(1) }
+			else {
+			return (func.slice(0, xe)).concat(func.slice(xe+1))
+		} };
+</script>
+<body>
+<div class="row">
+<div class="column middle" name="odey" style="background-color:none;color:lime;">
+<a href="file:///c:/stack/SimilaritYWriter20/src/textS/indat23720/filesystem.html" style="border-radius: 12px; padding: 2px 5px;" target="iframe_c">back</a>
+<textarea id="zoe" name="message" class="storyTeller" rows ="13" cols="150">
+I.                                                                        II.	
+  li list: ["0xy0z=3"."x0y0z=6","0x0yz=2","xyz=11"]   
+  quirky:["00000","0xy0z=3x0y0z=6","x0y0z=6","0x0yz=2","01111","xyz=11"]  |  
+  abyssRun : "BBBDDF","FFHHJJ","JLLNNP","PPRRTT","TVVXXX","ZZZ\\\\^"]     |           
+
+  cells0:  exports                                     compare            |            
+  cells1:  -------                                     -------            |           
+  cell content with name e.g   "B Bxyxyx"      "B Bxyxyx" to "00000"  =>
+   |
+   |cell content "Bxyxyx"
+   |
+   |cell content "00000"                         cells content foli4   
+ 								
+
+</textarea>
+<br><br>
+<!-- <input type="text" id="fname" size="40" onkeypress="myFunction2(event)" onkeyup="myReg(myFunction2(event))"> -->
+
+<p id="demo"></p>
+
+<script>
+
+</script>
+
+<div>
+<input type="text" id="myText2" class="storyTeller" rows="43" cols="150" style="background-color:none;color:lime;" onkeypress="myRegg()">
+	 
+<p id="hemi"></p>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("myText2").value;
+  document.getElementById("demo").innerHTML = x;
+}
+
+var strR = "BTC, A1.23 val, BHD, B0.23 val, BTC, C2.34 val , ZEC, D0.3 val, BHD, valE0.5";
+var dataWORK = "BBDDDF, FHHHJJ, LLLNNN, PPRRRT, TVVVXX, ZZZ00";
+var thu = ["BBDDDF","FHHHJJ","LLLNNN","PPRRRT","TVVVXX","ZZZ\\\\\\"];
+var thuNum = "40.1496259351621,47.93926247288503,50.81967213114754,62.0253164556962";  // ##########################################################################     daObJ0
+var thu2 = "B Byzyzyz,B B60z60z,B Bzz==0=,B B,D N,F N";
+var thu2Ar = ["B Byz","B B60","B B","B B","D N","F N"];
+
+function geT(){
+    var workThu = Number(find((tgAr[0]), tgAr));
+    document.getElementById("hemi").innerHTML = "  positions: "+ workThu + "    length:" + thu.length;
+    };
+
+function myRegg() {
+  var writeRg = document.getElementById("myText2").value;
+  var aRg = new RegExp ("("+writeRg+")", "g");
+  var patt1 = /(BTC|green)/g;
+  var prepZoe = JSON.stringify(thu2Ar);
+  var result = thu2.match(aRg);
+  var geTs = (find(writeRg, thu2Ar));
+                     		 
+
+  document.getElementById("hemi").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"EXPLAIN  length:" + thu.length + "         of \'thu2\': ["+ thu2+"]</p>";
+   document.getElementById("zoe").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"  length:" + thu.length + "         of \'thu2\': ["+ thu2+"]</p>";
+
+  };
+
+</script>
+ </div>
+  <!--                                                                                           Snd command Line: hemi2 is myText3 -->
+  <div>
+<input type="text" id="myText3" class="storyTeller" rows="43" cols="150" style="background-color:none;color:lime;" onkeypress="myRegRule()">
+	 
+<p id="hemi2"></p>
+
+<script>
+function myFunction() {   //                  ----------------------------------- #################################### $$$$$$$$$$$$$$$$$$$$$$$$$ hemi2
+  var x = document.getElementById("myText3").value;
+  document.getElementById("demo").innerHTML = x;
+}
+
+var strR = "BTC, A1.23 val, BHD, B0.23 val, BTC, C2.34 val , ZEC, D0.3 val, BHD, valE0.5";
+var dataWORK = "BBDDDF, FHHHJJ, LLLNNN, PPRRRT, TVVVXX, ZZZ00";
+var thu = ["BBDDDF","FHHHJJ","LLLNNN","PPRRRT","TVVVXX","ZZZ\\\\\\"];
+var thuNum = "40.1496259351621,47.93926247288503,50.81967213114754,62.0253164556962"; // #########################################################  daObJ0
+var thu2 = "B Byzyzyz,B B60z60z,B Bzz==0=,B B,D N,F N";
+var thu2Ar = ["B Byz","B B60","B B","B B","D N","F N"];
+
+function myRegRule() {
+  var writeRg = document.getElementById("myText2").value;
+  var aRg = new RegExp ("("+writeRg+")", "g");
+  var patt1 = /(BTC|green)/g;
+  var prepZoe = JSON.stringify(zoe);
+  var result = thu2.match(aRg);
+  var geTs = (find(writeRg, thu2Ar));
+  //var backAr = paragraph.thu2Ar;
+    document.getElementById("hemi2").innerHTML = (""+geTs +"     " +geTs.length);
+  };
+
+</script>
+ </div>
+ <!--                                                                                                end snd command lin e -->
+  <!--                                                                                           3rd command Line: hemi3 is myText4 -->
+  <div>
+<input type="text" id="myText4" class="storyTeller" rows="43" cols="150" style="background-color:none;color:lime;" onkeypress="teRex()">
+	 
+<p id="hemi3"></p>
+
+<script>
+function myFunction6() {                       //                                              $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -------------------$ hemi 3
+  var x = document.getElementById("myText4").value;
+  document.getElementById("hemi3").innerHTML = x;
+}
+var thu2 = "B Byzyzyz,B B60z60z,B Bzz==0=,B B,D N,F N";   // §§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§§ filled CELLS
+var thu2Ar = ["B Byz","B B60","B B","B B","D N","F N"];
+var liStr = "00000, 0xy0z=3x0y0z=6, x0y0z=6, 0x0yz=2, 01111, xyz=11";  //  ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++  'quirky'
+var liM2 = ["00000","0xy0z=3x0y0z=6","x0y0z=6","0x0yz=2","01111","xyz=11"]
+
+function teRex() {
+  var writeRg = document.getElementById("myText4").value;
+  var aRg = new RegExp ("("+writeRg+")", "g");
+  var patt1 = /(BTC|green)/g;
+  var result = liStr.match(aRg);
+ // var result = thu2.match(aRg);
+  var geTs = (find(writeRg, liM2));
+  document.getElementById("hemi2").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"  length:" + liStr.length + "         of \'liStr\': ["+ liStr+"]</p>";
+
+  };
+</script>
+ </div>
+ <!--                                                                                                end 3rd command lin e -->
+  <!--                                                                                           4th command Line: hemi4 is myText5 -->
+  <div>
+<input type="text" id="myText5" class="storyTeller" rows="43" cols="150" style="background-color:none;color:lime;" onkeypress="teRex3()">
+	 
+<p id="hemi4"></p>
+
+<script>
+</script>
+ </div>
+ <!--                                                                                                end 4th command lin e -->
+
+ </div>
+<div class="column middle" name="odey" style="background-color:none;color:lime;">
+	<div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>  <!-- ################4444$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ THE PLOTTER -->
+
+</div>
+
+<div class="column middle" name="odey" style="background-color:none;color:lime;">
+<a href="pfeil" style="border-radius: 12px; padding: 2px 5px;" target="iframe_a">link Angular</a>
+ <div class="storyTeller">
+
+ <iframe src="https://angular-cloakswordwand.stackblitz.io" name="iframe_a" style="border:none;background:#d1d00f6;frameBorder:0;" width="100%" height="300px"></iframe>
+<br><br>
+ </div>
+
+
+ </div>
+ 
+</body></html>
+
