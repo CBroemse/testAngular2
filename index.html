@@ -226,16 +226,29 @@ function sliCE(func, foxe){           /* --------------------------   drop foxe 
 			else {
 			return (func.slice(0, xe)).concat(func.slice(xe+1))
 		} };
+
+// --------------------------------------- ++++++++++++++++ ################# ADDED 04-04-2012
 </script>
 <body>
 <div class="row">
 <div class="column middle" name="odey" style="background-color:none;color:lime;">
-<a href="https://www.schoolofhaskell.com/school/to-infinity-and-beyond/pick-of-the-week/guide-to-ghc-extensions/basic-syntax-extensions" style="border-radius: 12px; padding: 2px 5px;" target="iframe_c">back</a>
+<a href="https://www.kraken.com/prices?quote=EUR" style="border-radius: 12px; padding: 2px 5px;" target="zoe">back</a>
 <textarea id="zoe" name="message" class="storyTeller" rows ="13" cols="150">
+
+ GET year 2012 GO 20  -- box4 write date list of length 20
+ 
+ SearchCSV.hs            -- write txt files with
+ 
+ checK "archive/BTC-USD.csv" "Open"   Write files that can be pluged into
+ the other searchboxes or use Haskell to write files with only on collum that can
+ be selected via the choose file button, maybe fill the Angular form with 
+ selections or txt files
+
 I.                                                                        II.	
   li list: ["0xy0z=3"."x0y0z=6","0x0yz=2","xyz=11"]   
   quirky:["00000","0xy0z=3x0y0z=6","x0y0z=6","0x0yz=2","01111","xyz=11"]  |  
   abyssRun : "BBBDDF","FFHHJJ","JLLNNP","PPRRTT","TVVXXX","ZZZ\\\\^"]     |           
+
 
   cells0:  exports                                     compare            |            
   cells1:  -------                                     -------            |           
@@ -313,6 +326,21 @@ function myRegRule() {
   };
 
 </script>
+<p id="readeR"></p>                            <!--                                readeR    minipulate file javascript-->
+
+<script>
+let fileHandle;
+       butOpenFile.addEventListener('click', async () => {
+  // Destructure the one-element array.
+      [fileHandle] = await window.showOpenFilePicker();
+  // Do something with the file handle.
+      });
+const file = await fileHandle.getFile();
+const contents = await file.text(); 
+
+</script>
+
+
  </div>
  <!--                                                                                                end snd command lin e -->
   <!--                                                                                           3rd command Line: hemi3 is myText4 -->
@@ -342,13 +370,139 @@ function teRex() {
  <!--                                                                                                end 3rd command lin e -->
   <!--                                                                                           4th command Line: hemi4 is myText5 -->
   <div>
-<input type="text" id="myText5" class="storyTeller" rows="43" cols="150" style="background-color:none;color:lime;" onkeypress="teRex3()">
+<input type="text" id="startDate" class="storyTeller" rows="43" cols="150" style="background-color:none;color:lime;" onkeypress="teRex3()">
 	 
 <p id="hemi4"></p>
+ <script src="js/myTime.js"></script>
+
+
 
 <script>
+
+// e.g type 'GET year 2012 GO 20'  
+// => manipulate the random start date :2011-03-09 17:30 and choose the first 20 
+
+function teRex3(somedata) {
+  var readIn = document.getElementById("startDate").value;   
+  var prepIO = (""+readIn+"").split(" ");             // order stream  prepIO[0] , prepIO[1] , ...
+  var ifLong = prepIO.length;                        //                 GET          no          list 
+    var aRg = new RegExp ("("+readIn+")", "g");    // search own command
+   //  var result = dataStr0.match(aRg2);
+   if ( (prepIO[0]) == (("GET").toString())){     
+	   document.getElementById("zoe").innerHTML = "<p> MyTime</p><p \n>selected "+prepIO[1]+" "+prepIO[2]+" start time:"+myDew(prepIO[1], prepIO[2])+"   </p>";
+	   if (prepIO[3]=="GO".toString() && (ifLong> 3)){
+		       var text = "";
+		       var motor = Number(prepIO[4]);
+		       var counT = Number(prepIO[2]);
+                       var i=0;
+		       while (i<motor) {
+			 var rekeN = i+counT;
+			 var uiT = rekeN.toString();
+                          text += "<br>line " + i+ " "+myDew(prepIO[1],uiT)+"\n";
+                           i++;
+                           	}
+	               document.getElementById("zoe").innerHTML = text;	       
+		  
+	                } 
+			   } 
+    // Type : 'SLICE year 2012'  or 'SLICE month .. or 'SLICE day ...
+   else if (prepIO[0]=="SLICE".toString() && ifLong > 1){
+         var ka = document.getElementById("readeR").text 
+         var fA   =  document.getElementById("zoe").value ;
+	// var readIn = document.getElementById("startDate").value;   
+         var prepVALUES = (""+fA+"").split("\n");    
+	 // var away 
+          ifLongREEF = prepVALUES.length;
+	 
+	  stopper = prepIO[2];
+	 //var tecH = prepVALUES[Number(prepIO[1])]; 
+	 var tecH = prepVALUES.toString();
+	 var motecH = prepVALUES.slice(1, 10);
+	 var readIn2 = document.getElementById("startDate").text;   
+         var prepIO2 = (""+readIn2+"").split(" "); 
+
+	 function mappER(start, solong){
+	               var myDateF = "";
+		       var motor = solong // Number(prepIO2[1]);
+		       var counT = start // Number(prepIO[2]);
+                       var i=1;
+		       while (i<motor) {
+			 var rekeN = i+counT;
+			 var uiT = rekeN.toString();
+                        //fromFilE += ""+(((prepVALUES[i]).substring(1)).split(","))[1]+"\n,";
+			myDateF += " "+myDew(prepIO[1],uiT)+"\n";
+                           i++;
+                           	}
+	        return myDateF;	}
+          function mappERDATA(start, solong){
+	   
+	               var myData = "";
+		       var motor = solong // Number(prepIO2[1]);
+		       var counT = start // Number(prepIO[2]);
+                       var i=1;
+		       while (i<motor) {
+			 var rekeN = i+counT;
+			 var uiT = rekeN.toString();
+                       // fromFilE += ""+(((prepVALUES[i]).substring(1)).split(","))[1]+"\n,";
+			myData += ""+(((prepVALUES[i]).substring(1)).split(","))[1]+"\n";  // ----------------------- SELECT collumn in FILE 
+                           i++;
+                           	}
+	        return myData;	}
+	  
+	  // function does [String] to [Float] 
+	  //            a str array to a float array
+	  function aMAP(){
+	 var foprepAr = (""+mappERDATA(2,6)+"").split("\n");
+	 return foprepAr.map(Number)}
+   
+const reBuiL =  "48.05194805194805,59.65065502183406" 
+function receiveString(some){
+	return  some };   // turn string to object
+
+// const obJ1 = { "dataStr11" : "48.05194805194805,59.65065502183406" };
+const obJ1 = { "dataStr11" : (receiveString(mappERDATA( 0, ifLongREEF).split("\n") )) };
+
+daObJ1  = new Object(obJ1); 
+
+document.getElementById("hemi2").innerHTML = daObJ1.dataStr11 ; //new Object (""+JSON.stringify(tK)+"");
+
+
+
+	 var data = [
+  {
+    x:  (mappER(0,ifLongREEF)),
+    y: (daObJ1.dataStr11), //prepVALUES, //array, //(mappERDATA(0,20).split("\n")),
+    type: 'scatter'
+  }
+];
+
+        Plotly.newPlot('myDiv', data);	
+	document.getElementById("zoe").innerHTML =  mappERDATA( 2, 20).split("\n") ; }   
+}; 
+/*
+   else {
+      var seaX = motR("year", 2012, 20);
+      document.getElementById("zoe").innerHTML = seaX ;
+    }
+};
+*/
+
+
 </script>
+
  </div>
+ <div>
+    <script type="text/javascript">
+      function replyOne () {
+       document.getElementById("comment_content").value =
+    document.getElementById("username").innerHTML      }
+
+    function does() {document.getElementById("zoe").innerHTML;} </script>
+
+	  	  <p id="username"></p>
+    <textarea id="comment_content" ></textarea>
+    <button onclick="replyOne();does()">Copy Text</button>
+</div>
  <!--                                                                                                end 4th command lin e -->
 
  </div>
@@ -359,7 +513,13 @@ function teRex() {
 
 <div class="column middle" name="odey" style="background-color:none;color:lime;">
 <a href="pfeil" style="border-radius: 12px; padding: 2px 5px;" target="iframe_a">link Angular</a>
+<input type="file" id="fileInput">
+ <script src="js/readFile.js"></script>
+
  <div class="storyTeller">
+  <textarea id="steno" class="storyTeller" rows="43" cols="150">
+</textarea>
+<br><br>
 
  <iframe src="https://angular-cloakswordwand.stackblitz.io" name="iframe_a" style="border:none;background:#d1d00f6;frameBorder:0;" width="100%" height="500px"></iframe>
 <br><br>
