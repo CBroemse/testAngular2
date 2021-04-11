@@ -232,21 +232,23 @@ function sliCE(func, foxe){           /* --------------------------   drop foxe 
 <body>
 <div class="row">
 <div class="column middle" name="odey" style="background-color:none;color:lime;">
-<a href="https://www.kraken.com/prices?quote=EUR" style="border-radius: 12px; padding: 2px 5px;" target="zoe">back</a>
+<a href="https://cbroemse.github.io/crypto_ticker/" style="border-radius: 12px; padding: 2px 5px;" target="zoe">back</a>
 <textarea id="zoe" name="message" class="storyTeller" rows ="13" cols="150">
 
- type: 'GET year 2012 GO 20'  -- box4 write date list of length 20
-
- select a csv
+ type: 'GET year 2012 GO 20'  -- box4 write date list of length 20 with Javascript
+ write format to textarea 'zoe' :       Date,Open
+                                        yyyy-mm-dd hh:mm, Float
 
  type: 'SLICE year'              plot a file fro, archive e.g btcNew.txt
+ 
+ select and work a csv with Haskell
  
  SearchCSV.hs            write txt files to archive 
                      e.g SearchCSV> checK "archive/BTC-USD.csv" "Open" 0    
 			    -- or 1..
  needs format :
  Date,Open
- yyyy-mm-dd hh:mm, Float
+ yyyy-mm-dd, Float
 
 
 
