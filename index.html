@@ -235,11 +235,13 @@ function sliCE(func, foxe){           /* --------------------------   drop foxe 
 <a href="https://plotly.com/javascript/time-series/" style="border-radius: 12px; padding: 2px 5px;" target="iframe_a0">back</a>
 <textarea id="zoe" name="message" class="storyTeller" rows ="13" cols="150">
 
- type: 'GET year 2012 GO 20'  -- box4 write date list of length 20 with Javascript
- write format to textarea 'zoe' :       Date,Open
-                                        yyyy-mm-dd hh:mm, Float
+ type: 'GET year 2012 GO 20'  -- 'box3:' write date list of length 20 with Javascript
+ write format to textarea 'zoe' :        Date,Open
+                                         yyyy-mm-dd hh:mm, Float
 
- type: 'SLICE year'              plot a file fro, archive e.g btcNew.txt
+			 type: 'SLICE 2 22 GO'             
+		         plot a file line 2 to 22  
+		         from file e.g	archive/btcNew.txt
  
  select and work a csv with Haskell
  
@@ -284,7 +286,7 @@ I.                                                                        II.
 </textarea>
 <br><br>
 <!-- <input type="text" id="fname" size="40" onkeypress="myFunction2(event)" onkeyup="myReg(myFunction2(event))"> -->
-
+<p> 1 & 2 : search in selected data (under construction)</p>
 <p id="demo"></p>
 
 <script>
@@ -325,52 +327,10 @@ function myRegg() {
 </script>
  </div>
   <!--                                                                                           Snd command Line: hemi2 is myText3 -->
-  <div>
-<input type="text" id="myText3" class="storyTeller" rows="43" cols="150" style="background-color:none;color:lime;" onkeypress="myRegRule()">
-	 
-<p id="hemi2"></p>
-
-<script>
-function myFunction() {   //                  ----------------------------------- #################################### $$$$$$$$$$$$$$$$$$$$$$$$$ hemi2
-  var x = document.getElementById("myText3").value;
-  document.getElementById("demo").innerHTML = x;
-}
-
-
-function myRegRule() {
-  var writeRg = document.getElementById("myText2").value;
-  var aRg = new RegExp ("("+writeRg+")", "g");
-  var patt1 = /(BTC|green)/g;
-  var prepZoe = JSON.stringify(zoe);
-  var result = thuK2K.match(aRg);
-  var geTs = (find(writeRg, thuK2KAr));
-  //var backAr = paragraph.thuK2KAr;
-    document.getElementById("hemi2").innerHTML = (""+geTs +"     " +geTs.length);
-  };
-
-</script>
-<p id="readeR"></p>                            <!--                                readeR    minipulate file javascript-->
-
-<script>
-let fileHandle;
-       butOpenFile.addEventListener('click', async () => {
-  // Destructure the one-element array.
-      [fileHandle] = await window.showOpenFilePicker();
-  // Do something with the file handle.
-      });
-const file = await fileHandle.getFile();
-const contents = await file.text(); 
-
-</script>
-
-
- </div>
- <!--                                                                                                end snd command lin e -->
-  <!--                                                                                           3rd command Line: hemi3 is myText4 -->
-  <div>
+   <div>
 <input type="text" id="myText4" class="storyTeller" rows="43" cols="150" style="background-color:none;color:lime;" onkeypress="teRex()">
 	 
-<p id="hemi3"></p>
+<p id="hemi3">'box3:'</p>
 
 <script>
 function myFunction6() {                       //                                              $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -------------------$ hemi 3
