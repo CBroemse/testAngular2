@@ -239,18 +239,19 @@ function sliCE(func, foxe){           /* --------------------------   drop foxe 
  write format to textarea 'zoe' :       Date,Open
                                         yyyy-mm-dd hh:mm, Float
 
- type: 'SLICE 2 22 PLOT'              plot line 2 to 22 
-                                      e.g archive/btcNew.txt
- 
- select and work a csv with Haskell
- 
- SearchCSV.hs            write txt files to archive 
+ I. prep a txt file with SearchCSV.hs
+    select and work a csv with Haskell
+    SearchCSV.hs     write txt files to archive 
                      e.g SearchCSV> checK "archive/BTC-USD.csv" "Open" 0    
 			    -- or 1..
- needs format :
- Date,Open
- yyyy-mm-dd, Float
-
+ 
+ II. type: 'SLICE 2 22 PLOT'              plot line 2 to 22 
+                                      e.g archive/btcNew.txt
+ 
+     needs format e.g :
+     Date,Open,Close       -- or what you chose in Haskell
+     yyyy-mm-dd, Float     -- set to plot 2 graphs by the two objects
+                              'daObJ1' and 'daObJ2' 
 
 
 
@@ -287,7 +288,7 @@ I.                                                                        II.
 <br><br>
 <!-- <input type="text" id="fname" size="40" onkeypress="myFunction2(event)" onkeyup="myReg(myFunction2(event))"> -->
 
-<p id="demo"></p>
+<p id="demo">1&2 regular expression search in input (under construction)</p>
 
 <script>
 
@@ -349,7 +350,7 @@ const contents = await file.text();
   <div>
 <input type="text" id="myText4" class="storyTeller" rows="43" cols="150" style="background-color:none;color:lime;" onkeypress="teRex()">
 	 
-<p id="hemi3"></p>
+<p id="hemi3">'text3:'</p>
 
 <script>
 function myFunction6() {                       //                                              $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -------------------$ hemi 3
