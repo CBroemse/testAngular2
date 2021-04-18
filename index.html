@@ -235,13 +235,12 @@ function sliCE(func, foxe){           /* --------------------------   drop foxe 
 <a href="https://plotly.com/javascript/time-series/" style="border-radius: 12px; padding: 2px 5px;" target="iframe_a0">back</a>
 <textarea id="zoe" name="message" class="storyTeller" rows ="13" cols="150">
 
- type: 'GET year 2012 GO 20'  -- 'box3:' write date list of length 20 with Javascript
- write format to textarea 'zoe' :        Date,Open
-                                         yyyy-mm-dd hh:mm, Float
+ type: 'GET year 2012 GO 20'  -- box4 write date list of length 20 with Javascript
+ write format to textarea 'zoe' :       Date,Open
+                                        yyyy-mm-dd hh:mm, Float
 
-			 type: 'SLICE 2 22 GO'             
-		         plot a file line 2 to 22  
-		         from file e.g	archive/btcNew.txt
+ type: 'SLICE 2 22 PLOT'              plot line 2 to 22 
+                                      e.g archive/btcNew.txt
  
  select and work a csv with Haskell
  
@@ -251,6 +250,7 @@ function sliCE(func, foxe){           /* --------------------------   drop foxe 
  needs format :
  Date,Open
  yyyy-mm-dd, Float
+
 
 
 
@@ -286,7 +286,7 @@ I.                                                                        II.
 </textarea>
 <br><br>
 <!-- <input type="text" id="fname" size="40" onkeypress="myFunction2(event)" onkeyup="myReg(myFunction2(event))"> -->
-<p> 1 & 2 : search in selected data (under construction)</p>
+
 <p id="demo"></p>
 
 <script>
@@ -316,7 +316,7 @@ function myRegg() {
   var prepZoe = JSON.stringify(thu2ZAr);
   var result = thu2Z.match(aRg);
   var fromZoe = document.getElementById("hemi2").innerHTML
-  var geTs = (find(writeRg, (""+fromZoe+"").split("\n")));
+  var geTs = (find(writeRg, fromZoe));
                      		 
 
   document.getElementById("hemi").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"EXPLAIN  length:" + thuZ.length + "         of \'thu2Z\': ["+ thu2Z+"]</p>";
@@ -327,10 +327,29 @@ function myRegg() {
 </script>
  </div>
   <!--                                                                                           Snd command Line: hemi2 is myText3 -->
-   <div>
+  <div>
+<p id="readeR"></p>                            <!--                                readeR    minipulate file javascript-->
+
+<script>
+let fileHandle;
+       butOpenFile.addEventListener('click', async () => {
+  // Destructure the one-element array.
+      [fileHandle] = await window.showOpenFilePicker();
+  // Do something with the file handle.
+      });
+const file = await fileHandle.getFile();
+const contents = await file.text(); 
+
+</script>
+
+
+ </div>
+ <!--                                                                                                end snd command lin e -->
+  <!--                                                                                           3rd command Line: hemi3 is myText4 -->
+  <div>
 <input type="text" id="myText4" class="storyTeller" rows="43" cols="150" style="background-color:none;color:lime;" onkeypress="teRex()">
 	 
-<p id="hemi3">'box3:'</p>
+<p id="hemi3"></p>
 
 <script>
 function myFunction6() {                       //                                              $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$ -------------------$ hemi 3
@@ -345,7 +364,7 @@ function teRex() {
   var result = liStr.match(aRg);
  // var result = thu2.match(aRg);
   var geTs = (find(writeRg, liM2));
-  document.getElementById("hemi2").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"  length:" + liStr.length + "         of \'liStr\': ["+ liStr+"]</p>";
+  document.getElementById("hemi1").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"  length:" + liStr.length + "         of \'liStr\': ["+ liStr+"]</p>";
 
   };
 </script>
@@ -452,7 +471,7 @@ function teRex3(somedata) {
                       daObJ1  = new Object(obJ1); 
 		      const obJ2 = { "dataStr12" : (receiveString(mappERDATA( starT, endS,2).split("\n") )) };
                       daObJ2  = new Object(obJ2); 
-                      document.getElementById("hemi2").innerHTML = daObJ1.dataStr11 ; //new Object (""+JSON.stringify(tK)+"");
+                      document.getElementById("hemi3").innerHTML = daObJ1.dataStr11 ; //new Object (""+JSON.stringify(tK)+"");
 
 	               var data = [                                   // ###########################################  PLOTTER entry
                         {
