@@ -313,7 +313,8 @@ function myRegg() {
   var patt1 = /(BTC|green)/g;
   var prepZoe = JSON.stringify(thu2ZAr);
   var result = thu2Z.match(aRg);
-  var geTs = (find(writeRg, thu2ZAr));
+  var fromZoe = document.getElementById("hemi2").innerHTML
+  var geTs = (find(writeRg, (""+fromZoe+"").split("\n")));
                      		 
 
   document.getElementById("hemi").innerHTML = "<p>"+ (result)+ "</p><p \n>  posi: "+geTs+"EXPLAIN  length:" + thuZ.length + "         of \'thu2Z\': ["+ thu2Z+"]</p>";
@@ -428,24 +429,27 @@ function teRex3(somedata) {
 	                } 
 			   } 
     // Type : 'SLICE year 2012'  or 'SLICE month .. or 'SLICE day ...
-   else if (prepIO[0]=="SLICE".toString() && ifLong > 1){
-         var ka = document.getElementById("readeR").text 
-         var fA   =  document.getElementById("zoe").value ;
-	// var readIn = document.getElementById("startDate").value;   
+    //  or e.g:  'SLICE 0 22 PLOT' 
+   else if (prepIO[0]=="SLICE".toString() && ifLong > 0){
+	 var ka = document.getElementById("readeR").text   //  ########################## the 'readeR' takes a fileHandle -> txt input 
+         var fA   =  document.getElementById("zoe").value ;  //              ############ 'readeR' was preselected by 'SearchCSV.hs' 
+	// var readIn = document.getElementById("startDate").value;          ############  needs format : Date,Open
+                                                             //              ############                 yyyy-mm-dd, Float
+                                                             //              ############           try : yyyy-mm-dd, Float, Float
          var prepVALUES = (""+fA+"").split("\n");    
-	 // var away 
+	 // count the lines of input from 'readeR' passed via 'html' paragraph 'zoe'  
           ifLongREEF = prepVALUES.length;
 	 
 	  stopper = prepIO[2];
 	 //var tecH = prepVALUES[Number(prepIO[1])]; 
 	 var tecH = prepVALUES.toString();
 	 var motecH = prepVALUES.slice(1, 10);
-	 var readIn2 = document.getElementById("startDate").text;   
+	 var readIn2 = document.getElementById("startDate").text;  // ################ text box4 the 'owned' console 
          var prepIO2 = (""+readIn2+"").split(" "); 
 
-	 function mappER(start, solong){
-	               var myDateF = "";
-		       var motor = solong // Number(prepIO2[1]);
+	 function mappER(start, solong){   // ######################################### used for DATE
+	               var myDateF = "";                                   //  exports  ['yyyy,mm,dd','yyyy,mm,dd',..'yyy,..dd']
+		       var motor = solong // Number(prepIO2[1]);           //  plug into 'Plotly' library in PLOTTER entry below
 		       var counT = start // Number(prepIO[2]);
                        var i=1;
 		       while (i<motor) {
@@ -456,8 +460,8 @@ function teRex3(somedata) {
                            i++;
                            	}
 	        return myDateF;	}
-          function mappERDATA(start, solong){
-	   
+	 function mappERDATA(start, solong, columN){   // ############ get txt -> 'readFile' -> readeR -> ka 
+		                               // ############ -> ka -> Float                                     
 	               var myData = "";
 		       var motor = solong // Number(prepIO2[1]);
 		       var counT = start // Number(prepIO[2]);
@@ -466,41 +470,48 @@ function teRex3(somedata) {
 			 var rekeN = i+counT;
 			 var uiT = rekeN.toString();
                        // fromFilE += ""+(((prepVALUES[i]).substring(1)).split(","))[1]+"\n,";
-			myData += ""+(((prepVALUES[i]).substring(1)).split(","))[1]+"\n";  // ----------------------- SELECT collumn in FILE 
+			myData += ""+(((prepVALUES[i]).substring(1)).split(","))[columN]+"\n";  // ----------------------- SELECT collumn in FILE 
                            i++;
                            	}
 	        return myData;	}
-	  
 	  // function does [String] to [Float] 
 	  //            a str array to a float array
 	  function aMAP(){
-	 var foprepAr = (""+mappERDATA(2,6)+"").split("\n");
+	 var foprepAr = (""+mappERDATA(2,6,1)+"").split("\n");
 	 return foprepAr.map(Number)}
-   
-const reBuiL =  "48.05194805194805,59.65065502183406" 
-function receiveString(some){
-	return  some };   // turn string to object
+         const reBuiL =  "48.05194805194805,59.65065502183406" 
+         function receiveString(some){
+   	 return  some };   // turn string to object
+                      if (prepIO[3]=="PLOT".toString() && ifLong == 4){   // ######################################## 
 
-// const obJ1 = { "dataStr11" : "48.05194805194805,59.65065502183406" };
-const obJ1 = { "dataStr11" : (receiveString(mappERDATA( 0, ifLongREEF).split("\n") )) };
+              // const obJ1 = { "dataStr11" : "48.05194805194805,59.65065502183406" };
+			      //     ifLongREEF ::     , select length n of input lines from file input
+	              const starT = Number(prepIO[1]);
+		      const endS = Number(prepIO[2]);
+                      const obJ1 = { "dataStr11" : (receiveString(mappERDATA( starT, endS,1).split("\n") )) };
+                      daObJ1  = new Object(obJ1); 
+		      const obJ2 = { "dataStr12" : (receiveString(mappERDATA( starT, endS,2).split("\n") )) };
+                      daObJ2  = new Object(obJ2); 
+                      document.getElementById("hemi2").innerHTML = daObJ1.dataStr11 ; //new Object (""+JSON.stringify(tK)+"");
 
-daObJ1  = new Object(obJ1); 
-
-document.getElementById("hemi2").innerHTML = daObJ1.dataStr11 ; //new Object (""+JSON.stringify(tK)+"");
-
-
-
-	 var data = [
-  {
-    x:  (mappER(0,ifLongREEF)),
-    y: (daObJ1.dataStr11), //prepVALUES, //array, //(mappERDATA(0,20).split("\n")),
-    type: 'scatter'
-  }
-];
-
-        Plotly.newPlot('myDiv', data);	
-	document.getElementById("zoe").innerHTML =  mappERDATA( 2, 20).split("\n") ; }   
-}; 
+	               var data = [                                   // ###########################################  PLOTTER entry
+                        {
+                          x:  (mappER(0,ifLongREEF)),
+                          y: (daObJ1.dataStr11), //prepVALUES, //array, //(mappERDATA(0,20,1).split("\n")),
+                          type: 'scatter'
+                         },
+			 {
+                          x:  (mappER(0,ifLongREEF)),
+                          y: (daObJ2.dataStr12), //prepVALUES, //array, //(mappERDATA(0,20,1).split("\n")),
+                          type: 'scatter'
+                         }
+                         ];
+                      
+                       Plotly.newPlot('myDiv', data);
+		       document.getElementById("zoe").innerHTML =  mappERDATA( 2, 20,1) ;
+		      // document.getElementById("hemi").innerHTML = ifLong.toString(); 
+		          } }
+                        }; 
 /*
    else {
       var seaX = motR("year", 2012, 20);
